@@ -1,0 +1,11 @@
+---
+layout: page
+title: Learn Kotlin
+---
+{% for post in site.categories.rediscover-math %}
+  <a href="{{ site.github.url }}{{ post.url }}">
+    <div class="">
+      <h2><span>{{ post.title }}</span></h2>
+    </div>
+  </a>
+{% endfor %}
