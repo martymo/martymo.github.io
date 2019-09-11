@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Kotlin Reference Excerpts"
+title: "Kotlin - Classes and Objects"
 author: "Martym"
 categories: learn-kotlin
 tags: [kotlin]
@@ -56,8 +56,6 @@ class Person(val name: String) { // Primary constructor
 
 - Create an instance of a class `val invoice = Invoice()`
 
-
-
 ### Inheritance
 
 - `Any` is the base class of all classes and it has three methods:
@@ -102,9 +100,52 @@ class Person(val name: String) { // Primary constructor
 # Properties and Fields
 # Interfaces
 # Visibility Modifiers
+
+- `public` is the default
+- `private`
+- `protected`
+- `internal` and modules
+
 # Extensions
+
+- Extension functions
+
+- Extensions are resolved statically
+
+- Member always wins
+
+- Nullable receiver
+
+``` kotlin
+fun any?.toString(): String {
+    if (this == null) return "null"
+
+    return toString()
+}
+```
+
+- Most of the time we define extensions on the top level - directly
+  under packages. They need to be imported at the call site
+
 # Data Classes
+
+- `data class Point(val x: Int, val y: Int)`
+
+- In the above case, `x` is `component1()` and `y` is `component2()`
+
+- Overriding `copy` is not allowed
+
 # Sealed Classes
+
+``` kotlin
+fun eval(expr: Expr): Double = when(expr) {
+    is Const -> expr.number
+    is Sum -> eval(expr.e1) + eval(expr.e2)
+    NotANumber -> Double.NaN
+    // the `else` clause is not required because we've covered all the cases
+}
+```
+
 # Generics
 # Nested Classes
 # Enum Classes
@@ -112,7 +153,7 @@ class Person(val name: String) { // Primary constructor
 
 - Use object expressions to create an object of an anonymous class
 
-- Just an object
+- Or just an object
 
 ``` kotlin
 val ahHoc = object {
@@ -167,6 +208,11 @@ val f: Factory<MyClass> = MyClass
 ```
 
 # Type Aliases
+
+- Use `typealias` to shorten long generic types
+
+- Use `typealias` for inner and nested classes
+
 # Inline Classes
 # Delegation
 # Delegated Properties
