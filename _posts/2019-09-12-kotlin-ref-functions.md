@@ -38,10 +38,22 @@ foo(strings = *arrayOf("a", "b", "c"))
 - Infix function calls have lower precedence than the arithmetic, type
   casts, and the RangeTo operator. And use parentheses!
 
+- Functions can be declared at the top level
+
+- Functions support closure
+
 - Generic functions `fun <T> foo(item: T): List<T> { /*...*/  }`
 
 - `tailrec` optimises out tail recursions
 
 ## Lambdas
+
+- First-class functions, meaning functions can be stored in variables
+  and data structures
+
+- A higher-Order function is a function that takes functions as
+  parameters, or returns a function
+
+- Function types (`->`), e.g. `(R, T) -> R`
 
 ## Inline Functions
