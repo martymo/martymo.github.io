@@ -44,9 +44,9 @@ find>`. Basically, find all the `require` in your ruby source files.
 - `sed` -- stream editor
 
 `sed -e 's/test_file/file/g' source.rb` -- Replace every `test_file`
-with `file` in `source.rb`. With `g`, it will only replace the first
+with `file` in `source.rb`. Without `g`, it will only replace the first
 occurrence in each line.
-
+g
 - An example - Can you explain what the line below does?
 
 ``` shell
