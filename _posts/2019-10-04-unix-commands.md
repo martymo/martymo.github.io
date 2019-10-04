@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "A list of UNIX commands to get started"
+title: "A very short list of UNIX commands to get started"
 author: "Martym"
 categories: computer
 tags: []
 ---
 
-# A list of UNIX commands to get started
+# A very short list of UNIX commands to get started
 
 ## Commands
 
